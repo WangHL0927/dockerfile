@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # uninstall packages
-#apt-get purge -y gcc python3-dev curl git
+apt-get purge -y gcc python3-dev curl
 
 ## clean
 apt-get clean
