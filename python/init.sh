@@ -19,11 +19,20 @@ EOF
 
 # install packages
 apt-get update
-apt-get install -y gcc python3-dev curl
+apt-get install -y gcc python3-dev curl git
 
 ## clean
 apt-get clean
 apt-get autoremove
+
+# install repo
+git --version
+curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -o /usr/local/bin/repo
+chmod a+rx /usr/local/bin/repo
+
+# setup git
+git config --global user.email "wanghualong@pi2star.com"
+git config --global user.name "WangHualong"
 
 # set pip mirrors
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
