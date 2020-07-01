@@ -19,10 +19,11 @@ EOF
 
 # install packages
 apt-get update
-apt-get install -y gcc python3-dev
+apt-get install -y gcc python3-dev repo
 
 ## clean
 apt-get clean
+apt-get autoremove
 
 # set pip mirrors
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
