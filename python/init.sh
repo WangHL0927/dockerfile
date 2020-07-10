@@ -19,7 +19,11 @@ EOF
 
 # install packages
 apt-get update
-apt-get install -y gcc python3-dev curl git
+apt-get install -y python3-dev curl git gcc libgsl0-dev
+
+## install libeemd
+mv src/libeemd.so.1.4.1 /usr/lib/libeemd.so.1.4.1
+ln -s /usr/lib/libeemd.so.1.4.1 /usr/lib/libeemd.so
 
 ## clean
 apt-get clean
